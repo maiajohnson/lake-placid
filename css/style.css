@@ -32,18 +32,39 @@
 }
 
 
-@media screen and (min-width: 780px) and (max-width: 1024px) {
+@media screen (max-width: 780px) {
     #sidebar-nav li{
       font-size: 0.550em !important;
     }
     .page-nav{
       display: none;
     }
+    .slide-caption {
+      width: 100%;
+    }
+  
 }
 
 .row .row{
   margin-right: 0;
   margin-left: 0;
+}
+
+.row{
+  max-width: 100rem; 
+}
+
+a{
+  webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
 }
 
 /* SIDEBAR */
@@ -306,12 +327,32 @@ color: #999;
 }
 
 .block{
-  height: 215px;
+  height: 200px;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.projects{
+  background-image: url('../img/our-projects.jpg');
+}
+
+.team{
+  background-image: url('../img/team.jpg');
+  background-position: 0% 30%;
+}
+
+.partners-consultants{
+  background-image: url('../img/partners-consultants.jpg');
+}
+
+.land-aquisition{
+  background-image: url('../img/land-aquisition.jpg');
 }
 
 .about-block{
-  height:50em;
+  height: 100%;
   width:100%;
   background: #4d738a;
 }
@@ -322,15 +363,10 @@ color: #999;
   right: 0;
   position: absolute;
   width: 100%;
-  background-color: rgba(0,0,0,0.6);
-  visibility: hidden;
-}
-
-
-.block:hover .block-overlay{
-  visibility: visible;
+  background-color: rgba(0,0,0,0.4);
 
 }
+
 
 .block-overlay p{
   font-family: "GothamRounded-Medium", Helvetica, Roboto, Arial, sans-serif;
@@ -348,8 +384,24 @@ color: #999;
   bottom:0;
   padding: 10px 20px;
   color: #7ba7ae;
-  font-size: 35px
+  font-size: 35px;
+  webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
 }
+
+.block-overlay:hover span{
+  color: #fff;
+}
+
+
 
 
 /* BODY */
@@ -494,6 +546,14 @@ form .button{
     width: 100%;
   }
 
+i.fa.fa-search {
+  position: absolute;
+  bottom:0;
+  right: 0;
+  padding: 10px;
+  color: #fff;
+}
+
 .th{
   border: none;
   box-shadow: none;
@@ -501,6 +561,20 @@ form .button{
 
 .th:hover, .th:focus{
   box-shadow: none;  
+}
+
+.th:hover i{
+  color: #79a3aa; 
+  webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color; 
 }
 
 #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span{
